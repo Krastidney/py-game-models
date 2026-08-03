@@ -1,5 +1,4 @@
 import init_django_orm  # noqa: F401
-import datetime
 import json
 
 from db.models import Race, Skill, Player, Guild
@@ -31,8 +30,7 @@ def main() -> None:
             race=race_data,
             guild=guild_data,
             email=player["email"],
-            bio=player.get("bio", ""),
-            created_at=datetime.datetime.now()
+            bio=player.get("bio", "")
         )
 
 
